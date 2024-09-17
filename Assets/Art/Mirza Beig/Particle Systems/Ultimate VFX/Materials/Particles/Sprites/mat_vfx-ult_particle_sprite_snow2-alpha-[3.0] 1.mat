@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mat_vfx-ult_particle_sprite_wisp2-add-[1.0]
-  m_Shader: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: mat_vfx-ult_particle_sprite_snow2-alpha-[3.0] 1
+  m_Shader: {fileID: 203, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -16,7 +16,7 @@ Material:
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -24,13 +24,13 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 82a6f9d3b79402e4f83d096af1de3837, type: 3}
+        m_Texture: {fileID: 2800000, guid: 139191bc27593724aafabe6e56aadcf4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _InvFade: 1
+    - _InvFade: 3
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _TintColor: {r: 0.18609823, g: 0.40502593, b: 0.7735849, a: 1}
+    - _TintColor: {r: 0.41438237, g: 0.6393049, b: 0.9056604, a: 1}
   m_BuildTextureStacks: []
