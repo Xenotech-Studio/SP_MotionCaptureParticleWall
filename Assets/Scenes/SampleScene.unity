@@ -6157,7 +6157,7 @@ GameObject:
   - component: {fileID: 34248271}
   - component: {fileID: 34248273}
   - component: {fileID: 34248272}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightUpperLegCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14596,7 +14596,7 @@ GameObject:
   m_Component:
   - component: {fileID: 309124776}
   - component: {fileID: 309124777}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightLowerArmCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14660,7 +14660,7 @@ GameObject:
   - component: {fileID: 369152485}
   - component: {fileID: 369152487}
   - component: {fileID: 369152486}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightLowerLegCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16061,7 +16061,7 @@ GameObject:
   m_Component:
   - component: {fileID: 473929984}
   - component: {fileID: 473929985}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightLowerArmCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28370,7 +28370,7 @@ GameObject:
   - component: {fileID: 662258990}
   - component: {fileID: 662258992}
   - component: {fileID: 662258991}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightUpperArmCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33646,7 +33646,7 @@ GameObject:
   - component: {fileID: 952425300}
   - component: {fileID: 952425302}
   - component: {fileID: 952425301}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftUpperArmCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35038,7 +35038,7 @@ GameObject:
   - component: {fileID: 1096219371}
   - component: {fileID: 1096219373}
   - component: {fileID: 1096219372}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BodyCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35115,7 +35115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1149409440}
   - component: {fileID: 1149409441}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightLowerArmCollider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36543,7 +36543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1286188424}
   - component: {fileID: 1286188425}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftLowerArmCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36601,7 +36601,7 @@ GameObject:
   - component: {fileID: 1332697583}
   - component: {fileID: 1332697585}
   - component: {fileID: 1332697584}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftLowerLegCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36679,7 +36679,7 @@ GameObject:
   - component: {fileID: 1419635738}
   - component: {fileID: 1419635740}
   - component: {fileID: 1419635739}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftUpperLegCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36757,7 +36757,7 @@ GameObject:
   - component: {fileID: 1434038604}
   - component: {fileID: 1434038606}
   - component: {fileID: 1434038605}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HeadCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
