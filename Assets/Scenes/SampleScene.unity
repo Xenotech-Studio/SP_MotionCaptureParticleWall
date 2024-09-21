@@ -6167,13 +6167,13 @@ GameObject:
   - component: {fileID: 34248271}
   - component: {fileID: 34248273}
   - component: {fileID: 34248272}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightUpperLegCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &34248271
 Transform:
   m_ObjectHideFlags: 0
@@ -6208,8 +6208,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.08763184, y: 0.5410218, z: 8}
-  m_Center: {x: -0.000038933555, y: -0.19936208, z: 0.126091}
+  m_Size: {x: 0.08763184, y: 0.5410218, z: 0.1}
+  m_Center: {x: -0.000038933555, y: -0.19936208, z: 0}
 --- !u!114 &34248273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6226,10 +6226,10 @@ MonoBehaviour:
   FixPositionX: 0
   FixPositionY: 0
   FixPositionZ: 0
-  FixRotationY: 1
-  FixRotationX: 1
+  FixRotationY: 0
+  FixRotationX: 0
   FixRotationZ: 0
-  CompletelyFollow: 0
+  CompletelyFollow: 1
   Validated: 1
   ForceFix: 0
   DoFixScale: 0
@@ -17223,7 +17223,7 @@ PrefabInstance:
     - target: {fileID: 4795146293947268469, guid: 9052af1d20e9b70418b0e2efb661bae3,
         type: 3}
       propertyPath: CollisionModule.enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4795146293947268469, guid: 9052af1d20e9b70418b0e2efb661bae3,
         type: 3}
@@ -19776,13 +19776,13 @@ GameObject:
   m_Component:
   - component: {fileID: 309124776}
   - component: {fileID: 309124777}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightLowerArmCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &309124776
 Transform:
   m_ObjectHideFlags: 0
@@ -19815,10 +19815,10 @@ MonoBehaviour:
   FixPositionX: 0
   FixPositionY: 0
   FixPositionZ: 0
-  FixRotationY: 1
-  FixRotationX: 1
+  FixRotationY: 0
+  FixRotationX: 0
   FixRotationZ: 0
-  CompletelyFollow: 0
+  CompletelyFollow: 1
   Validated: 1
   ForceFix: 0
   DoFixScale: 0
@@ -19840,13 +19840,13 @@ GameObject:
   - component: {fileID: 369152485}
   - component: {fileID: 369152487}
   - component: {fileID: 369152486}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightLowerLegCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &369152485
 Transform:
   m_ObjectHideFlags: 0
@@ -19881,8 +19881,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.08763184, y: 0.57994026, z: 8}
-  m_Center: {x: -0.000038939204, y: -0.21882133, z: 0.12609103}
+  m_Size: {x: 0.08763184, y: 0.57994026, z: 0.1}
+  m_Center: {x: -0.000038939204, y: -0.21882133, z: 0}
 --- !u!114 &369152487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19899,10 +19899,10 @@ MonoBehaviour:
   FixPositionX: 0
   FixPositionY: 0
   FixPositionZ: 0
-  FixRotationY: 1
-  FixRotationX: 1
+  FixRotationY: 0
+  FixRotationX: 0
   FixRotationZ: 0
-  CompletelyFollow: 0
+  CompletelyFollow: 1
   Validated: 1
   ForceFix: 0
   DoFixScale: 0
@@ -21251,7 +21251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 473929984}
   - component: {fileID: 473929985}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightLowerArmCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21266,13 +21266,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473929983}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.13121834, w: 0.9913535}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.109830916, y: 0.028735057, z: 0.69448525, w: 0.7104941}
+  m_LocalPosition: {x: -0.037, y: -0.029, z: -0.134}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1286188424}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15.08}
+  m_LocalEulerAnglesHint: {x: 6.67, y: 11.227, z: 89.351}
 --- !u!65 &473929985
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21292,7 +21292,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3763625, y: 0.073350295, z: 8}
+  m_Size: {x: 0.3763625, y: 0.073350295, z: 0.1}
   m_Center: {x: 0.22149092, y: -0.0015495652, z: 0.12609103}
 --- !u!1 &510598112
 GameObject:
@@ -33561,13 +33561,13 @@ GameObject:
   - component: {fileID: 662258990}
   - component: {fileID: 662258992}
   - component: {fileID: 662258991}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightUpperArmCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &662258990
 Transform:
   m_ObjectHideFlags: 0
@@ -33602,8 +33602,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.31397548, y: 0.0949169, z: 8}
-  m_Center: {x: 0.10386278, y: -0.000012526512, z: 0.126091}
+  m_Size: {x: 0.08631438, y: 0.31558236, z: 0.089227036}
+  m_Center: {x: -0.048808977, y: -0.12923753, z: -0.0020639256}
 --- !u!114 &662258992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33620,10 +33620,10 @@ MonoBehaviour:
   FixPositionX: 0
   FixPositionY: 0
   FixPositionZ: 0
-  FixRotationY: 1
-  FixRotationX: 1
+  FixRotationY: 0
+  FixRotationX: 0
   FixRotationZ: 0
-  CompletelyFollow: 0
+  CompletelyFollow: 1
   Validated: 1
   ForceFix: 0
   DoFixScale: 0
@@ -39011,13 +39011,13 @@ GameObject:
   - component: {fileID: 952425300}
   - component: {fileID: 952425302}
   - component: {fileID: 952425301}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftUpperArmCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &952425300
 Transform:
   m_ObjectHideFlags: 0
@@ -39052,8 +39052,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.31397548, y: 0.0949169, z: 8}
-  m_Center: {x: 0.10386278, y: -0.000012526512, z: 0.126091}
+  m_Size: {x: 0.07976851, y: 0.31441945, z: 0.07730473}
+  m_Center: {x: 0.0054564215, y: 0.09384259, z: -0.015191696}
 --- !u!114 &952425302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39070,10 +39070,10 @@ MonoBehaviour:
   FixPositionX: 0
   FixPositionY: 0
   FixPositionZ: 0
-  FixRotationY: 1
-  FixRotationX: 1
+  FixRotationY: 0
+  FixRotationX: 0
   FixRotationZ: 0
-  CompletelyFollow: 0
+  CompletelyFollow: 1
   Validated: 1
   ForceFix: 0
   DoFixScale: 0
@@ -40413,7 +40413,7 @@ GameObject:
   - component: {fileID: 1096219371}
   - component: {fileID: 1096219373}
   - component: {fileID: 1096219372}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BodyCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40454,8 +40454,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.22626892, y: 0.5464441, z: 8}
-  m_Center: {x: -0.0049585444, y: 0.14454117, z: 0.12609103}
+  m_Size: {x: 0.22626893, y: 0.5464441, z: 0.21641287}
+  m_Center: {x: -0.004958553, y: 0.14454077, z: 0.0038534384}
 --- !u!114 &1096219373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40472,10 +40472,10 @@ MonoBehaviour:
   FixPositionX: 0
   FixPositionY: 0
   FixPositionZ: 0
-  FixRotationY: 1
-  FixRotationX: 1
+  FixRotationY: 0
+  FixRotationX: 0
   FixRotationZ: 0
-  CompletelyFollow: 0
+  CompletelyFollow: 1
   Validated: 1
   ForceFix: 0
   DoFixScale: 0
@@ -40490,7 +40490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1149409440}
   - component: {fileID: 1149409441}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightLowerArmCollider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40505,13 +40505,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149409439}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.07610995, w: 0.9970995}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.14000228, y: -0.21379821, z: 0.7171069, w: -0.6484192}
+  m_LocalPosition: {x: -0.023, y: 0.017, z: -0.101}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 309124776}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 8.73}
+  m_LocalEulerAnglesHint: {x: 7.185, y: 28.806, z: 266.088}
 --- !u!65 &1149409441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40531,7 +40531,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.36183545, y: 0.0949169, z: 8}
+  m_Size: {x: 0.36183545, y: 0.0949169, z: 0.1}
   m_Center: {x: 0.21820311, y: -0.000012529831, z: 0.12609103}
 --- !u!1 &1203305696 stripped
 GameObject:
@@ -41928,13 +41928,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1286188424}
   - component: {fileID: 1286188425}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftLowerArmCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1286188424
 Transform:
   m_ObjectHideFlags: 0
@@ -41967,10 +41967,10 @@ MonoBehaviour:
   FixPositionX: 0
   FixPositionY: 0
   FixPositionZ: 0
-  FixRotationY: 1
-  FixRotationX: 1
+  FixRotationY: 0
+  FixRotationX: 0
   FixRotationZ: 0
-  CompletelyFollow: 0
+  CompletelyFollow: 1
   Validated: 1
   ForceFix: 0
   DoFixScale: 0
@@ -41986,13 +41986,13 @@ GameObject:
   - component: {fileID: 1332697583}
   - component: {fileID: 1332697585}
   - component: {fileID: 1332697584}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftLowerLegCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1332697583
 Transform:
   m_ObjectHideFlags: 0
@@ -42027,8 +42027,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.08763184, y: 0.5757395, z: 8}
-  m_Center: {x: -0.0000389318, y: 0.24039851, z: 0.12609103}
+  m_Size: {x: 0.08763184, y: 0.5757395, z: 0.1}
+  m_Center: {x: -0.0000389318, y: 0.24039851, z: 0}
 --- !u!114 &1332697585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42045,10 +42045,10 @@ MonoBehaviour:
   FixPositionX: 0
   FixPositionY: 0
   FixPositionZ: 0
-  FixRotationY: 1
-  FixRotationX: 1
+  FixRotationY: 0
+  FixRotationX: 0
   FixRotationZ: 0
-  CompletelyFollow: 0
+  CompletelyFollow: 1
   Validated: 1
   ForceFix: 0
   DoFixScale: 0
@@ -42064,13 +42064,13 @@ GameObject:
   - component: {fileID: 1419635738}
   - component: {fileID: 1419635740}
   - component: {fileID: 1419635739}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftUpperLegCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1419635738
 Transform:
   m_ObjectHideFlags: 0
@@ -42105,8 +42105,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.09292427, y: 0.49371332, z: 8}
-  m_Center: {x: -0.0026851888, y: 0.19938537, z: 0.126091}
+  m_Size: {x: 0.09292427, y: 0.49371332, z: 0.1}
+  m_Center: {x: -0.0026851888, y: 0.19938537, z: 0}
 --- !u!114 &1419635740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42123,10 +42123,10 @@ MonoBehaviour:
   FixPositionX: 0
   FixPositionY: 0
   FixPositionZ: 0
-  FixRotationY: 1
-  FixRotationX: 1
+  FixRotationY: 0
+  FixRotationX: 0
   FixRotationZ: 0
-  CompletelyFollow: 0
+  CompletelyFollow: 1
   Validated: 1
   ForceFix: 0
   DoFixScale: 0
@@ -42142,13 +42142,13 @@ GameObject:
   - component: {fileID: 1434038604}
   - component: {fileID: 1434038606}
   - component: {fileID: 1434038605}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HeadCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1434038604
 Transform:
   m_ObjectHideFlags: 0
@@ -42184,7 +42184,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.12
-  m_Height: 8
+  m_Height: 0.3
   m_Direction: 2
   m_Center: {x: 0.01, y: 0.06, z: 0}
 --- !u!114 &1434038606
@@ -42203,10 +42203,10 @@ MonoBehaviour:
   FixPositionX: 0
   FixPositionY: 0
   FixPositionZ: 0
-  FixRotationY: 1
-  FixRotationX: 1
+  FixRotationY: 0
+  FixRotationX: 0
   FixRotationZ: 0
-  CompletelyFollow: 0
+  CompletelyFollow: 1
   Validated: 1
   ForceFix: 0
   DoFixScale: 0
@@ -48083,17 +48083,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 3
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_RenderingLayers: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_ShadowRenderingLayers: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
-  m_SoftShadowQuality: 0
 --- !u!1 &1961179234
 GameObject:
   m_ObjectHideFlags: 0
@@ -55757,38 +55746,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_AllowHDROutput: 1
-  m_UseScreenCoordOverride: 0
-  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
-  m_TaaSettings:
-    quality: 3
-    frameInfluence: 0.1
-    jitterScale: 1
-    mipBias: 0
-    varianceClampScale: 0.9
-    contrastAdaptiveSharpening: 0
 --- !u!114 &2132550435
 MonoBehaviour:
   m_ObjectHideFlags: 0
