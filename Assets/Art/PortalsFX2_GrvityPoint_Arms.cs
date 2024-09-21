@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-public class PortalsFX2_GrvityPoint : MonoBehaviour
+public class PortalsFX2_GrvityPoint_Arms : MonoBehaviour
 {
     public Transform Target;//是人的圆柱体吗
     public float followForce = 1;
@@ -53,31 +53,30 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
             }
             if (StopDistance > 0.001f && distanceToParticle.magnitude >= StopDistance)//如果在停止距离范围内且能移
             {
-               particles[i].velocity*=0.6f;
-                /*Vector3 orthogonalTargetTransformedPosition = Vector3.Cross(Vector3.back, -distanceToParticle).normalized;//目标位置的正交位置
-                particles[i].velocity += orthogonalTargetTransformedPosition.normalized *  Time.deltaTime * Mathf.Sign((distanceToParticle.x)*dragForce);*/
+                particles[i].velocity=Vector3.zero;
+                Vector3 orthogonalTargetTransformedPosition = Vector3.Cross(Vector3.back, -distanceToParticle).normalized;//目标位置的正交位置
+                particles[i].velocity += orthogonalTargetTransformedPosition.normalized *  Time.deltaTime * Mathf.Sign((distanceToParticle.x)*dragForce);
                 
             }
             else
             {
-                if (isleft)
-                {
-                    
-                        /*var directionToTarget = Vector3.Normalize(distanceToParticle);//目标方向
+                
+                    if (distanceToParticle.x > 0)
+                    {
+                        var directionToTarget = Vector3.Normalize(distanceToParticle);//目标方向
                         var seekForce = directionToTarget* Time.deltaTime * followForce;//方向*单位时间力*力大小的速度
-                        particles[i].velocity += seekForce;//速度上改变*/
-                        particles[i].velocity -= new Vector3( Time.deltaTime * followForce, 0, 0);
-                        particles[i].remainingLifetime *= lifeTimeReduce;
-                       
+                        particles[i].velocity += seekForce;//速度上改变
+                        particles[i].velocity -= new Vector3(0.01f,0,0)*Mathf.Sign((distanceToParticle.x));
 
+                    }
+                    else
+                    {
+                        Vector3 orthogonalTargetTransformedPosition = Vector3.Cross(Vector3.back, -distanceToParticle).normalized;//目标位置的正交位置
+                        particles[i].velocity += orthogonalTargetTransformedPosition.normalized *  Time.deltaTime *dragForce;
+                        particles[i].velocity+= new Vector3(0.05f,0,0)*Mathf.Sign((distanceToParticle.x));
+                    }
+                
 
-                }
-                else
-                {
-                    particles[i].velocity += new Vector3( Time.deltaTime * followForce, 0, 0);
-                    particles[i].remainingLifetime *= lifeTimeReduce;
-                }
-        
                    
             }
         }
