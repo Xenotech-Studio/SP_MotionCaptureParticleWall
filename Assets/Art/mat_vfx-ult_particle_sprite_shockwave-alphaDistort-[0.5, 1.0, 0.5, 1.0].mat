@@ -38,10 +38,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _Dist: 10
-    - _Distortion: 0.08
-    - _Intensity: 5.46
+    - _Distortion: 0.46
+    - _Intensity: 10
     - _InvFade: 5.89
-    - _Opacity: 0.41
+    - _Opacity: 0
     - _distortion: 1000
     - _opacity: 1
     m_Colors:
