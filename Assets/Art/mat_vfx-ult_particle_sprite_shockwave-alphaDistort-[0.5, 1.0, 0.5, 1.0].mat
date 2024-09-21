@@ -9,14 +9,17 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: mat_vfx-ult_particle_sprite_shockwave-alphaDistort-[0.5, 1.0, 0.5, 1.0]
   m_Shader: {fileID: 4800000, guid: 022aea2c4f60b12498fd68f0e670288d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3200
+  m_CustomRenderQueue: 2900
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -35,10 +38,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _Dist: 10
-    - _Distortion: 0.75
-    - _Intensity: 5.2
-    - _InvFade: 8
-    - _Opacity: 0.85
+    - _Distortion: 0.08
+    - _Intensity: 5.46
+    - _InvFade: 5.89
+    - _Opacity: 0.41
     - _distortion: 1000
     - _opacity: 1
     m_Colors:
