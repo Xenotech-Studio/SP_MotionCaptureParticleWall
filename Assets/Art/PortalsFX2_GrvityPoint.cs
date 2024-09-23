@@ -14,8 +14,8 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
     public float lifeTimeReduce = 0.99f;
     ParticleSystem ps;
     ParticleSystem.Particle[] particles;
-    private Vector3 lastTransform;
-    private int isleft=1;
+    public Vector3 lastTransform;
+    public int isleft=1;
     ParticleSystem.MainModule mainModule;
     List<ParticleSystem.Particle> enter=new List<ParticleSystem.Particle>();
     List<ParticleSystem.Particle> inside=new List<ParticleSystem.Particle>();
@@ -26,25 +26,47 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
     {
         ps = GetComponent<ParticleSystem>();
         mainModule = ps.main;
-        lastTransform = Target.position;
+        //lastTransform = Target.position;
     }
 
-    void Update()//后更新是在更新后，保证update里动完了之后再获取的确定坐标
+    void Update()
     {
-        
-        if (Target == null||lastTransform== Target.position) return;
-        if (Target.position.x > lastTransform.x&&isleft>0)
-        {
-            isleft *=-1 ;
-        }
-        lastTransform= Target.position;
         var maxParticles = mainModule.maxParticles;
         if (particles == null || particles.Length < maxParticles)//创建的particles不满粒子
         {
             particles = new ParticleSystem.Particle[maxParticles];//创建满粒子？
         }
-        int particleCount = ps.GetParticles(particles);//得到目前ps上的粒子数量
+        //得到目前ps上的粒子数量
+        int particleCount = ps.GetParticles(particles);
         var targetTransformedPosition = Target.position;
+        
+        if (lastTransform == Target.position)
+        {
+            for (int i = 0; i < particleCount; i++)
+            {
+                var distanceToParticle = targetTransformedPosition - particles[i].position;//每个particles到目标的距禓
+                distanceToParticle.z = 0;
+                if (particles[i].velocity.magnitude<0.2f&&distanceToParticle.magnitude<2*maxInfluenceDistance)//如果在停止距离范围内且能移
+                {
+                    particles[i].position += new Vector3( Time.deltaTime * followForce,0, 0)*isleft;
+                }
+            }
+            lastTransform= Target.position;
+            return;
+        }
+        
+        if (Target.position.x > lastTransform.x&&isleft>0&&Target.position.x-lastTransform.x>2f)
+        {
+            isleft *=-1 ;
+        }
+        if (Target.position.x < lastTransform.x&&isleft<0&&lastTransform.x-Target.position.x>2f)
+        {
+            isleft *=-1 ;
+        }
+        
+        lastTransform= Target.position;
+        
+        
         
         for (int i = 0; i < particleCount; i++)
         {
@@ -54,16 +76,13 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
             {
                 continue;
             }
-            if (StopDistance > 0.001f && distanceToParticle.magnitude >= StopDistance)//如果在停止距离范围内且能移
+            if (StopDistance > 0.001f && distanceToParticle.magnitude >= 2*StopDistance)//如果在停止距离范围内且能移
             {
-                /*particles[i].velocity*=0.2f;*/
+                particles[i].velocity*=0.01f;
             }
             else
             {
-                particles[i].velocity -= new Vector3( Time.deltaTime * followForce,0, 0)*isleft;
-                particles[i].remainingLifetime*=lifeTimeReduce;
-                
-
+                particles[i].position -= new Vector3( Time.deltaTime * followForce,0, 0)*isleft/distanceToParticle.magnitude;
             }
             
         }
@@ -85,8 +104,8 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
                     Vector3 targetDirection= enter[i].position - TargetHands[j].transform.position;
                     targetDirection.z = 0;
                     Vector3 force=Vector3.Normalize(targetDirection) * Time.deltaTime *
-                                  dragForce*2;
-                    force.z *= 0.1f;
+                                  dragForce/targetDirection.magnitude;
+                    force.z *= 0f;
                     p.velocity += force;
                     enter[i] = p;
                 }
@@ -102,8 +121,8 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
                     Vector3 targetDirection= inside[i].position - TargetHands[j].transform.position;
                     targetDirection.z = 0;
                     Vector3 force=Vector3.Normalize(targetDirection) * Time.deltaTime *
-                                  dragForce*2;
-                    force.z *= 0.1f;
+                                  dragForce/targetDirection.magnitude;
+                    force.z *= 0f;
                     p.velocity += force;
                     inside[i] = p;
                 }
@@ -113,7 +132,7 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
         for (int i = 0; i < numExit; i++)
         {
             ParticleSystem.Particle p =exit[i];
-            p.velocity *= 0.1f;
+            p.velocity *= 0f;
             exit[i] = p;
         }
 
