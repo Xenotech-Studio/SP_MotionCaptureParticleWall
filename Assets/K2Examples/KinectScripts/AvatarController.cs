@@ -51,6 +51,8 @@ public class AvatarController : MonoBehaviour
 	[Tooltip("If enabled, makes the avatar position relative to this camera to be the same as the player's position to the sensor.")]
 	public Camera posRelativeToCamera;
 
+	public List<Camera> posRelativeToCameras;
+
 	[Tooltip("Whether the avatar's position should match the color image (in Pos-rel-to-camera mode only).")]
 	public bool posRelOverlayColor = false;
 	
@@ -185,6 +187,15 @@ public class AvatarController : MonoBehaviour
 		return null;
 	}
 
+	public void changeToCamera2()
+	{
+		posRelativeToCamera=posRelativeToCameras[1];
+	}
+	
+	public void changeToCamera3()
+	{
+		posRelativeToCamera=posRelativeToCameras[2];
+	}
     /// <summary>
     /// Get joint position with respect of player world and kinect offsets   ( //!!still some problems with accurate Y pos, probably connected with kinect sensor height estimation ) 
     /// </summary>
