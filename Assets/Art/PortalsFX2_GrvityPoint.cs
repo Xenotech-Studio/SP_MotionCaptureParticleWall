@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = System.Random;
+using Random = UnityEngine.Random;
 
 
 public class PortalsFX2_GrvityPoint : MonoBehaviour
@@ -42,7 +42,7 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
         int particleCount = ps.GetParticles(particles);
         var targetTransformedPosition = Target.position;
 
-        if (Mathf.Abs(Target.position.x - lastTransform.x)<0.1f)
+        if (Mathf.Abs(Target.position.x - lastTransform.x)<0.3f)
         {
             for (int i = 0; i < particleCount; i++)
             {
@@ -55,17 +55,20 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
                         (TargetHands[j].transform.position - Target.transform.position).magnitude >
                         0.3f) //如果在停止距离范围内且能移
                     {
-                        particles[i].velocity *= 0.01f;
+                       particles[i].velocity *= 0.95f;
                     }
                     if (targetDirection.magnitude <handDistance&&
                         (TargetHands[j].transform.position - Target.transform.position).magnitude >
-                        0.3f)
+                        0.5f)
                     {
                         Vector3 force = Vector3.Normalize(targetDirection) * Time.deltaTime *
                             dragForce / targetDirection.magnitude;
                         force.z *= 0f;
-                        force.y *= 0.3f;
                         particles[i].position += force;
+                        particles[i].rotation += 20f*Time.deltaTime;
+                        particles[i].startSize *= Random.Range(0.99f,1.001f);
+                        particles[i].rotation3D += new Vector3(50f*Time.deltaTime,50f*Time.deltaTime,0)* Random.Range(-1f,1.01f);
+                        particles[i].angularVelocity3D += new Vector3(50f*Time.deltaTime,50f*Time.deltaTime,0);
                     }
                 }
 
@@ -74,8 +77,8 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
                 if (particles[i].velocity.magnitude < 0.2f &&
                     distanceToParticle.magnitude < 2 * maxInfluenceDistance) //如果在停止距离范围内且能移
                 {
-                    particles[i].velocity += new Vector3(Time.deltaTime * followForce,
-                                                 0, 0) * Mathf.Sign(-distanceToParticle.x);
+                    /*particles[i].velocity += new Vector3(Time.deltaTime * followForce,
+                                                 0, 0) * Mathf.Sign(-distanceToParticle.x);*/
                 }
             }
             ps.SetParticles(particles, particleCount);
@@ -83,12 +86,12 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
             return;
         }
 
-        if (Target.position.x > lastTransform.x && isleft > 0 && Target.position.x - lastTransform.x > 0.1f)
+        if (Target.position.x > lastTransform.x && isleft > 0 && Target.position.x - lastTransform.x > 0.3f)
         {
             isleft *= -1;
         }
 
-        if (Target.position.x < lastTransform.x && isleft < 0 && lastTransform.x - Target.position.x > 0.1f)
+        if (Target.position.x < lastTransform.x && isleft < 0 && lastTransform.x - Target.position.x > 0.3f)
         {
             isleft *= -1;
         }
@@ -108,17 +111,20 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
                     (TargetHands[j].transform.position - Target.transform.position).magnitude >
                     0.3f) //如果在停止距离范围内且能移
                 {
-                    particles[i].velocity *= 0.01f;
+                    particles[i].velocity *= 0.95f;
                 }
                 if (targetDirection.magnitude <handDistance&&
                     (TargetHands[j].transform.position - Target.transform.position).magnitude >
-                    0.3f)
+                    0.5f)
                 {
                     Vector3 force = Vector3.Normalize(targetDirection) * Time.deltaTime *
                         dragForce / targetDirection.magnitude;
                     force.z *= 0f;
-                    force.y *= 0.3f;
                     particles[i].position += force;
+                    particles[i].rotation += 20f*Time.deltaTime;
+                    particles[i].startSize *= Random.Range(0.99f,1.001f);
+                    particles[i].rotation3D += new Vector3(50f*Time.deltaTime,50f*Time.deltaTime,0)* Random.Range(-1f,1.01f);
+                    particles[i].angularVelocity3D += new Vector3(50f*Time.deltaTime,50f*Time.deltaTime,0);
                 }
             }
             if (distanceToParticle.magnitude > maxInfluenceDistance)
@@ -128,18 +134,24 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
 
             if (distanceToParticle.magnitude >= StopDistance) //如果在停止距离范围内且能移
             {
-                particles[i].velocity *= 0.01f;
+                //particles[i].velocity *= 2f;
                 /*particles[i].position += new Vector3(0,0 ,100f) * isleft /
                                          distanceToParticle.magnitude;*/
             }
             else
             {
-                particles[i].velocity*=20;
-                particles[i].position -= new Vector3(Time.deltaTime * followForce, Time.deltaTime * distanceToParticle.y*10, 0) * isleft /
-                                         distanceToParticle.magnitude;
-                particles[i].velocity -= new Vector3(Time.deltaTime * followForce*1.5f, Time.deltaTime * distanceToParticle.y*4, 0) * isleft /
-                                         distanceToParticle.magnitude;
-                particles[i].rotation += 50f*Time.deltaTime;
+
+                // particles[i].position -= new Vector3(Time.deltaTime * followForce + Random.Range(6f, 9f),
+                //                              Time.deltaTime * distanceToParticle.y * +Random.Range(-10f, 10f),
+                //                              Time.deltaTime * distanceToParticle.y * 10 + Random.Range(-5f, 10f)) *
+                //                          isleft /
+                //                          distanceToParticle.magnitude;
+                particles[i].velocity -= new Vector3(Time.deltaTime * followForce*2f+Random.Range(5f,9f), Time.deltaTime * distanceToParticle.y*4*Random.Range(-5f,2f), 0) * isleft/distanceToParticle.magnitude;
+                particles[i].rotation += 20f*Time.deltaTime;
+                particles[i].startSize *= Random.Range(0.99f,1.001f);
+                particles[i].rotation3D += new Vector3(300f*Time.deltaTime,300f*Time.deltaTime,0)* Random.Range(-1.1f,1.01f);
+                particles[i].angularVelocity3D += new Vector3(50f*Time.deltaTime,50f*Time.deltaTime,0);
+                //particles[i].remainingLifetime *= lifeTimeReduce;
                 
                 
             }
