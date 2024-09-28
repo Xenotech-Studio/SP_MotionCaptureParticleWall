@@ -141,17 +141,16 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
             else
             {
 
-                // particles[i].position -= new Vector3(Time.deltaTime * followForce + Random.Range(6f, 9f),
-                //                              Time.deltaTime * distanceToParticle.y * +Random.Range(-10f, 10f),
-                //                              Time.deltaTime * distanceToParticle.y * 10 + Random.Range(-5f, 10f)) *
-                //                          isleft /
-                //                          distanceToParticle.magnitude;
-                particles[i].velocity -= new Vector3(Time.deltaTime * followForce*2f+Random.Range(5f,9f), Time.deltaTime * distanceToParticle.y*4*Random.Range(-5f,2f), 0) * isleft/distanceToParticle.magnitude;
-                particles[i].rotation += 20f*Time.deltaTime;
-                particles[i].startSize *= Random.Range(0.99f,1.001f);
+                 particles[i].position -= new Vector3((Time.deltaTime * followForce + Random.Range(6f, 9f)) * isleft,
+                                              Time.deltaTime * distanceToParticle.y * +Random.Range(-10f, 10f),
+                                              Time.deltaTime * distanceToParticle.y * 10 + Random.Range(-5f, 10f)) /
+                                         distanceToParticle.magnitude;
+                particles[i].velocity -= new Vector3((Time.deltaTime * followForce*2f+Random.Range(5f,9f) )* isleft, Time.deltaTime * distanceToParticle.y*4*Random.Range(-5f,2f), 0);
+                particles[i].rotation += 80f*Time.deltaTime;
+                particles[i].startSize *= Random.Range(0.9f,0.98f);
                 particles[i].rotation3D += new Vector3(300f*Time.deltaTime,300f*Time.deltaTime,0)* Random.Range(-1.1f,1.01f);
-                particles[i].angularVelocity3D += new Vector3(50f*Time.deltaTime,50f*Time.deltaTime,0);
-                //particles[i].remainingLifetime *= lifeTimeReduce;
+                particles[i].angularVelocity3D += new Vector3(200f*Time.deltaTime,200f*Time.deltaTime,0);
+                particles[i].remainingLifetime -= lifeTimeReduce;
                 
                 
             }
