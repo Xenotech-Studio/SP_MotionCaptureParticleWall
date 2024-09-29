@@ -17,12 +17,12 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
     public ParticleSystem ps;
     ParticleSystem.Particle[] particles;
     private Vector3 lastTransform;
-    public int isleft = 1;
+    public float isleft = 1;
     ParticleSystem.MainModule mainModule;
     List<ParticleSystem.Particle> enter = new List<ParticleSystem.Particle>();
     List<ParticleSystem.Particle> inside = new List<ParticleSystem.Particle>();
     List<ParticleSystem.Particle> exit = new List<ParticleSystem.Particle>();
-
+    public float accumulatedTime;
 
     void Start()
     {
@@ -42,7 +42,7 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
         int particleCount = ps.GetParticles(particles);
         var targetTransformedPosition = Target.position;
 
-        if (Mathf.Abs(Target.position.x - lastTransform.x)<0.3f)
+        if (Mathf.Abs(Target.position.x - lastTransform.x)<0.2f)
         {
             for (int i = 0; i < particleCount; i++)
             {
@@ -62,13 +62,12 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
                         0.5f)
                     {
                         Vector3 force = Vector3.Normalize(targetDirection) * Time.deltaTime *
-                            dragForce / targetDirection.magnitude;
+                            dragForce*0.1f;
                         force.z *= 0f;
                         particles[i].position += force;
-                        particles[i].rotation += 20f*Time.deltaTime;
-                        particles[i].startSize *= Random.Range(0.99f,1.001f);
-                        particles[i].rotation3D += new Vector3(50f*Time.deltaTime,50f*Time.deltaTime,0)* Random.Range(-1f,1.01f);
-                        particles[i].angularVelocity3D += new Vector3(50f*Time.deltaTime,50f*Time.deltaTime,0);
+                        particles[i].rotation3D += new Vector3(0,0,10f*Time.deltaTime);
+                        particles[i].angularVelocity3D += new Vector3(0,300f*Time.deltaTime,300f*Time.deltaTime);
+                        particles[i].remainingLifetime *= lifeTimeReduce;
                     }
                 }
 
@@ -86,12 +85,12 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
             return;
         }
 
-        if (Target.position.x > lastTransform.x && isleft > 0 && Target.position.x - lastTransform.x > 0.3f)
+        if (Target.position.x > lastTransform.x && isleft > 0 && Target.position.x - lastTransform.x > 0.2f)
         {
             isleft *= -1;
         }
 
-        if (Target.position.x < lastTransform.x && isleft < 0 && lastTransform.x - Target.position.x > 0.3f)
+        if (Target.position.x < lastTransform.x && isleft < 0 && lastTransform.x - Target.position.x > 0.2f)
         {
             isleft *= -1;
         }
@@ -118,13 +117,12 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
                     0.5f)
                 {
                     Vector3 force = Vector3.Normalize(targetDirection) * Time.deltaTime *
-                        dragForce / targetDirection.magnitude;
+                        dragForce*0.1f;
                     force.z *= 0f;
                     particles[i].position += force;
-                    particles[i].rotation += 20f*Time.deltaTime;
-                    particles[i].startSize *= Random.Range(0.99f,1.001f);
-                    particles[i].rotation3D += new Vector3(50f*Time.deltaTime,50f*Time.deltaTime,0)* Random.Range(-1f,1.01f);
-                    particles[i].angularVelocity3D += new Vector3(50f*Time.deltaTime,50f*Time.deltaTime,0);
+                    particles[i].rotation3D += new Vector3(0,0,10f*Time.deltaTime);
+                    particles[i].angularVelocity3D += new Vector3(0,300f*Time.deltaTime,300f*Time.deltaTime);
+                    particles[i].remainingLifetime *= lifeTimeReduce;
                 }
             }
             if (distanceToParticle.magnitude > maxInfluenceDistance)
@@ -134,25 +132,24 @@ public class PortalsFX2_GrvityPoint : MonoBehaviour
 
             if (distanceToParticle.magnitude >= StopDistance) //如果在停止距离范围内且能移
             {
-                //particles[i].velocity *= 2f;
+                particles[i].velocity *= 0.95f;
                 /*particles[i].position += new Vector3(0,0 ,100f) * isleft /
                                          distanceToParticle.magnitude;*/
             }
             else
             {
 
-                 particles[i].position -= new Vector3((Time.deltaTime * followForce + Random.Range(6f, 9f)) * isleft,
+                 particles[i].position -= new Vector3((Time.deltaTime * followForce + Random.Range(2f, 3f)) * isleft,
                                               Time.deltaTime * distanceToParticle.y * +Random.Range(-10f, 10f),
-                                              Time.deltaTime * distanceToParticle.y * 10 + Random.Range(-5f, 10f)) /
+                                              0) /
                                          distanceToParticle.magnitude;
-                particles[i].velocity -= new Vector3((Time.deltaTime * followForce*2f+Random.Range(5f,9f) )* isleft, Time.deltaTime * distanceToParticle.y*4*Random.Range(-5f,2f), 0);
-                particles[i].rotation += 80f*Time.deltaTime;
-                particles[i].startSize *= Random.Range(0.9f,0.98f);
-                particles[i].rotation3D += new Vector3(300f*Time.deltaTime,300f*Time.deltaTime,0)* Random.Range(-1.1f,1.01f);
-                particles[i].angularVelocity3D += new Vector3(200f*Time.deltaTime,200f*Time.deltaTime,0);
-                particles[i].remainingLifetime -= lifeTimeReduce;
-                
-                
+                particles[i].velocity -= new Vector3((Time.deltaTime * followForce*2f+Random.Range(2f,3f) )* isleft, Time.deltaTime * distanceToParticle.y*4*Random.Range(-5f,2f), 0)*0.1f;
+                //particles[i].rotation += 10f*Time.deltaTime;
+               particles[i].startSize *= Random.Range(1.01f,1.2f);
+              /* particles[i].rotation3D += new Vector3(0,0,10f*Time.deltaTime);*/
+                particles[i].angularVelocity3D += new Vector3(0,20f*Time.deltaTime,20f*Time.deltaTime);
+                particles[i].remainingLifetime *= lifeTimeReduce;
+
             }
         }
         ps.SetParticles(particles, particleCount);
