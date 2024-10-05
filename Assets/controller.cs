@@ -21,7 +21,7 @@ public class controller : MonoBehaviour
     void Start()
     {
         lastPlayerPos=player.transform.position;
-        shapeFFT._windSpeed= 0;
+       // shapeFFT._windSpeed= 0;
         transform.position.Set(player.transform.position.x,transform.position.y,transform.position.z);
     }
 
