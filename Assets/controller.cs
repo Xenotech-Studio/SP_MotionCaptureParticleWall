@@ -15,6 +15,7 @@ public class controller : MonoBehaviour
     public Vector3 lastPlayerPos;
     private float stillTime;
     public int isleft = 1;
+    public float distance;
 
 
     // Start is called before the first frame update
@@ -28,7 +29,7 @@ public class controller : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (Mathf.Abs(player.transform.position.x -  lastPlayerPos.x)<0.1f)//记得换成误差型
+        if (Mathf.Abs(player.transform.position.x -  lastPlayerPos.x)<2.3f)//记得换成误差型
         {
             vectorField1.SetActive(false);
             vectorField2.SetActive(false);
@@ -36,12 +37,12 @@ public class controller : MonoBehaviour
             vectorField4.SetActive(false);
             return;
         }
-        else if (player.transform.position.x > lastPlayerPos.x && isleft > 0 && player.transform.position.x - lastPlayerPos.x > 0.1f)
+        else if (player.transform.position.x > lastPlayerPos.x && isleft > 0 && player.transform.position.x - lastPlayerPos.x > 2.3f)
         {
             isleft *= -1;
         }
 
-        if (player.transform.position.x < lastPlayerPos.x && isleft < 0 &&  lastPlayerPos.x -player.transform.position.x> 0.1f)
+        if (player.transform.position.x < lastPlayerPos.x && isleft < 0 &&  lastPlayerPos.x -player.transform.position.x> 2.3f)
         {
             isleft *= -1;
         }
@@ -60,6 +61,7 @@ public class controller : MonoBehaviour
         }
         
         lastPlayerPos=player.transform.position;
+        distance=player.transform.position.x - lastPlayerPos.x;
         
     }
 }
