@@ -17,7 +17,11 @@ public class meshRelativeTransform : MonoBehaviour
     void Update()
     {
         ParticleSystem.ShapeModule shape = ps.shape;
-        shape.position -=new Vector3(0f,0f,(target.transform.position.z-lastPlayerPos.z)/2);
-        lastPlayerPos=target.transform.position;
+        //shape.position -=new Vector3(0f,0f,(target.transform.position.z-lastPlayerPos.z));
+        //lastPlayerPos=target.transform.position;
+        shape.position+=new Vector3(0f,0f,(-shape.position.z-46.7f));
+
+
+	
     }
 }
