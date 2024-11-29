@@ -54,6 +54,7 @@ namespace com.rfilkov.components
         [Tooltip("If enabled, makes the avatar position relative to this camera to be the same as the player's position to the sensor.")]
         public Camera posRelativeToCamera;
 
+        public List<Camera> Cameras;
         [Tooltip("Whether the avatar's position should match the color image (in Pos-rel-to-camera mode only).")]
         public bool posRelOverlayColor = false;
 
@@ -161,7 +162,7 @@ namespace com.rfilkov.components
 
         // private instance of the KinectManager
         protected KinectManager kinectManager;
-
+        
         //// last hand events
         //private InteractionManager.HandEventType lastLeftHandEvent = InteractionManager.HandEventType.Release;
         //private InteractionManager.HandEventType lastRightHandEvent = InteractionManager.HandEventType.Release;
@@ -297,6 +298,15 @@ namespace com.rfilkov.components
             return alMecanimBones;
         }
 
+        public void SwitchToCamera2()
+        {
+            posRelativeToCamera = Cameras[0];
+        }
+        
+        public void SwitchToCamera3()
+        {
+            posRelativeToCamera = Cameras[1];
+        }
 
         // transform caching gives performance boost since Unity calls GetComponent<Transform>() each time you call transform 
         private Transform _transformCache;
