@@ -261,10 +261,6 @@ namespace com.rfilkov.kinect
             sensorListUpdateTime = Time.time;
 
             int deviceCount = Device.GetInstalledCount();
-            Debug.Log(string.Format("test {0}", Device.GetInstalledCount()));
-
-
-
             for (int i = 0; i < deviceCount; i++)
             {
                 using (Device device = Device.Open(i))
