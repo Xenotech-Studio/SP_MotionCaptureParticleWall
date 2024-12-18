@@ -3534,7 +3534,7 @@ namespace com.rfilkov.kinect
 
                         if (sensorData != null)
                         {
-                            Debug.Log("Succeeded opening " + sensorInt.GetType().Name);
+                            //Debug.Log("Succeeded opening " + sensorInt.GetType().Name);
 
                             sensorData.sensorInterface = sensorInt;
                             sensorData.sensorIndex = sensorInterfaces.Count;
