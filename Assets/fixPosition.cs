@@ -14,7 +14,7 @@ public class fixPosition : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position+=new Vector3(0,0,-transform.position.z+lastPlayerPos.z);
+        transform.position+=new Vector3(0,-transform.position.y+lastPlayerPos.y,-transform.position.z+lastPlayerPos.z);
         lastPlayerPos=transform.position;
     }
 }

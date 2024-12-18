@@ -6332,8 +6332,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.8
-      minScalar: 0.3
+      scalar: 1
+      minScalar: 0.4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -6915,7 +6915,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 800
+      scalar: 1200
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -19169,7 +19169,7 @@ Transform:
   m_GameObject: {fileID: 234026837}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -253.04, y: 26.549591, z: 23.3884}
+  m_LocalPosition: {x: -299.57, y: 26.549591, z: 23.3884}
   m_LocalScale: {x: 16.0913, y: 26.482996, z: 9.552002}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30812,8 +30812,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.8
-      minScalar: 0.3
+      scalar: 1
+      minScalar: 0.4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -31395,7 +31395,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 800
+      scalar: 1200
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -36187,7 +36187,7 @@ PrefabInstance:
     - target: {fileID: 352560075543025075, guid: b51292c6e33c6d44693ae049397b70a8,
         type: 3}
       propertyPath: lengthInSec
-      value: 99
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 352560075543025075, guid: b51292c6e33c6d44693ae049397b70a8,
         type: 3}
@@ -36367,7 +36367,7 @@ PrefabInstance:
     - target: {fileID: 352560075543025075, guid: b51292c6e33c6d44693ae049397b70a8,
         type: 3}
       propertyPath: InitialModule.maxNumParticles
-      value: 400
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 352560075543025075, guid: b51292c6e33c6d44693ae049397b70a8,
         type: 3}
@@ -36392,7 +36392,7 @@ PrefabInstance:
     - target: {fileID: 352560075543025075, guid: b51292c6e33c6d44693ae049397b70a8,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 20
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 352560075543025075, guid: b51292c6e33c6d44693ae049397b70a8,
         type: 3}
@@ -54618,7 +54618,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599222848}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
@@ -57087,8 +57087,8 @@ Transform:
   m_GameObject: {fileID: 745371377}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5122857, y: -0.48643655, z: -0.51780194, w: 0.48251846}
-  m_LocalPosition: {x: -114.8, y: 17.3, z: 9.2}
-  m_LocalScale: {x: 53.86019, y: 0.01, z: 547.7156}
+  m_LocalPosition: {x: -115, y: 2, z: 8}
+  m_LocalScale: {x: 59.526287, y: 0.01, z: 547.7156}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 586200329}
@@ -57385,7 +57385,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 12
+      scalar: 13
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -57594,7 +57594,7 @@ ParticleSystem:
         m_RotationOrder: 0
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 800
+    maxNumParticles: 900
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -57860,7 +57860,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 500
+      scalar: 600
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -84612,7 +84612,7 @@ Transform:
   m_GameObject: {fileID: 1047210030}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -253.04, y: 26.549591, z: 23.3884}
+  m_LocalPosition: {x: -299.57, y: 26.549591, z: 23.3884}
   m_LocalScale: {x: 16.0913, y: 26.482996, z: 9.552002}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -85060,7 +85060,7 @@ Transform:
   m_GameObject: {fileID: 1068797618}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -253.04, y: 26.549591, z: 23.3884}
+  m_LocalPosition: {x: -299.57, y: 26.549591, z: 23.3884}
   m_LocalScale: {x: 16.0913, y: 26.482996, z: 9.552002}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -88422,7 +88422,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1195047185}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
@@ -98293,7 +98293,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 36f1e0ceb91a7f44290e8f083f1d7948,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.13
+      value: -12.012
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 36f1e0ceb91a7f44290e8f083f1d7948,
         type: 3}
@@ -106554,8 +106554,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.8
-      minScalar: 0.3
+      scalar: 1
+      minScalar: 0.4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -107137,7 +107137,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 800
+      scalar: 1200
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -114705,7 +114705,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603448036}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
@@ -125403,7 +125403,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 36f1e0ceb91a7f44290e8f083f1d7948,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.13
+      value: -12.012
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 36f1e0ceb91a7f44290e8f083f1d7948,
         type: 3}
@@ -127414,7 +127414,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 36f1e0ceb91a7f44290e8f083f1d7948,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.13
+      value: -12.012
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 36f1e0ceb91a7f44290e8f083f1d7948,
         type: 3}
