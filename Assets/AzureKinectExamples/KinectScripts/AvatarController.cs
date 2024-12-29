@@ -307,6 +307,11 @@ namespace com.rfilkov.components
         {
             posRelativeToCamera = Cameras[1];
         }
+        
+        public void SwitchToCamera4()
+        {
+            posRelativeToCamera = Cameras[2];
+        }
 
         // transform caching gives performance boost since Unity calls GetComponent<Transform>() each time you call transform 
         private Transform _transformCache;
