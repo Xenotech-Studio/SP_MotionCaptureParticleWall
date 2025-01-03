@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class cameraMove : MonoBehaviour
 {
-    public Camera _Camera;
+    
 
     public Slider Slider;
 
@@ -14,24 +14,20 @@ public class cameraMove : MonoBehaviour
     public TMP_Text text;
     private float lastValue;
     // Start is called before the first frame update
-    void Start()
-    {
-        _Camera = GetComponent<Camera>();
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            canvas.SetActive(!canvas.activeSelf);
+            canvas.gameObject.SetActive(!canvas.gameObject.activeSelf);
         }
        
     }
     
     public void OnSliderValueChanged()
     {
-        _Camera.transform.position +=new Vector3( Slider.value-lastValue,0,0);
+        transform.position +=new Vector3( Slider.value-lastValue,0,0);
         text.text = Slider.value.ToString();
         lastValue = Slider.value;
     }
