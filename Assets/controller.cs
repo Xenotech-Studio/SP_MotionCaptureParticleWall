@@ -29,7 +29,7 @@ public class controller : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (Mathf.Abs(player.transform.position.x -  lastPlayerPos.x)<2.3f)//记得换成误差型
+        if (Mathf.Abs(player.transform.position.x -  lastPlayerPos.x)<0.4f)//记得换成误差型
         {
             vectorField1.SetActive(false);
             vectorField2.SetActive(false);
